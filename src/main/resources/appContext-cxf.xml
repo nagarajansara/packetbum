@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:jaxrs="http://cxf.apache.org/jaxrs" xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+
+	<import resource="classpath:META-INF/cxf/cxf.xml" />
+	<import resource="classpath:META-INF/cxf/cxf-servlet.xml" />
+    <!--   <import resource="classpath:META-INF/cxf/cxf-extension-jaxrs-binding.xml" /> -->
+    
+	 <bean id="TruckServiceImpl" class="com.truck.service.TruckServiceImpl" /> 
+	
+	<bean id="jaxbProvider" class="org.apache.cxf.jaxrs.provider.JAXBElementProvider">
+		<property name="marshallAsJaxbElement" value="true" />
+		<property name="unmarshallAsJaxbElement" value="true" />
+	</bean>
+	<bean id="jsonProvider" class="org.apache.cxf.jaxrs.provider.json.JSONProvider">
+		<property name="produceMediaTypes" ref="jsonTypes" />
+		<property name="marshallAsJaxbElement" value="true" />
+		<property name="unmarshallAsJaxbElement" value="true" />
+	</bean>
+	<util:list id="jsonTypes">
+		<value>application/json</value>
+	</util:list>
+	
+	<!--  SOAP Services -->
+	<!-- <jaxws:endpoint id="fenceService" implementor="#FenceServiceImpl" address="/FenceService" /> -->
+
+	<!--  REST Services-->
+	<jaxrs:server address="/rest/truckservice">
+		<jaxrs:serviceBeans>
+			<ref bean="TruckServiceImpl" />
+		</jaxrs:serviceBeans>
+		<jaxrs:providers>
+			<ref bean="jaxbProvider" />
+			<ref bean="jsonProvider" />
+		</jaxrs:providers>
+		<jaxrs:extensionMappings>
+			<entry key="json" value="application/json" />
+			<entry key="xml" value="application/xml" />
+		</jaxrs:extensionMappings>
+	</jaxrs:server> 
+	
+</beans>

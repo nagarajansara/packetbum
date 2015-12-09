@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:context="http://www.springframework.org/schema/context" xmlns:jaxrs="http://cxf.apache.org/jaxrs"
+	xmlns:jaxws="http://cxf.apache.org/jaxws" xmlns:util="http://www.springframework.org/schema/util" xmlns:security="http://www.springframework.org/schema/security"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.2.xsd
+		http://cxf.apache.org/jaxrs http://cxf.apache.org/schemas/jaxrs.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/security http://www.springframework.org/schema/security/spring-security-3.1.xsd
+		http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util-3.2.xsd">
+        
+	 <security:http security="none" pattern="/login.html" />
+	 <security:http security="none" pattern="/index.html" />
+	 <security:http security="none" pattern="/hwtowrk.html" />
+	 <security:http security="none" pattern="/admin/index.html" />
+	 <security:http security="none" pattern="/listitem.html" />
+	 <security:http security="none" pattern="/itemdetail.html" />
+	 <security:http security="none" pattern="/qfurniture.html" />
+	 <security:http security="none" pattern="/signup.html" />
+	<security:http security="none" pattern="/addUser.html" />
+	<security:http security="none" pattern="/home.html" authentication-manager-ref="truckAuthManager"/>
+	<security:http security="none" pattern="/j_spring_security_check.html" />
+	<security:http security="none" pattern="/assets/**" />
+	<security:http security="none" pattern="/dist/**" />
+	<security:http security="none" pattern="/payment/**" />
+	<security:http security="none" pattern="/services/rest/truckservice/retrieveCountries/**" />
+	
+	<security:http use-expressions="true" auto-config="true"  authentication-manager-ref="truckAuthManager"  request-matcher="regex">
+	
+		<!-- <security:intercept-url pattern="/index.html"  access="permitAll"  />
+		 --><security:intercept-url pattern="/pro/index.html"  access="hasRole('proOwner')"  />
+		<security:intercept-url pattern="/vcl/index.html"  access="hasRole('vclOwner')"  />
+			<!-- <security:intercept-url pattern="/getquote.html"  access="permitAll"  /> -->
+		<security:form-login login-page="/index.html?login=0"   authentication-success-handler-ref="redirectRoleStrategy"  authentication-failure-url="/index.html?login=1"/>
+		<security:http-basic/>
+		<security:logout logout-success-url="/index.html?login=0"/>
+		
+		 <security:anonymous enabled='false'/> 
+	</security:http>
+	
+	
+
+	<bean id="mySuccessHandler" class="com.truck.handler.MySavedRequestAwareAuthenticationSuccessHandler" />
+	
+    <bean id="redirectRoleStrategy" class="com.truck.handler.RoleBasedAuthenticationSuccessHandler">
+        <property name="roleUrlMap">
+            <map>
+                <entry key="admin" value="/admin/"/>
+                <entry key="proOwner" value="/pro/"/>
+                <entry key="vclOwner" value="/vcl/"/>
+            </map>
+        </property>
+    </bean>
+	<security:authentication-manager id="truckAuthManager" erase-credentials="false" alias="truckAuthManager">
+		<security:authentication-provider >
+	  
+			   <security:password-encoder ref="shaEncoder"> <security:salt-source user-property="username" /> </security:password-encoder>
+			 
+			 <security:jdbc-user-service  data-source-ref="dataSource" users-by-username-query="select username, password,isactive  from truckdb.user where username = ?" 
+				authorities-by-username-query="select username,role from truckdb.user where username = ?" />   
+				
+				  <!--  <security:user-service>
+                <security:user name="savans143@gmail.com" password="123" authorities="vclOwner" />
+            </security:user-service>   -->
+		</security:authentication-provider>
+	</security:authentication-manager> 
+
+   <bean id="bcrypt" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder" />
+	<bean id="shaEncoder" class="org.springframework.security.authentication.encoding.ShaPasswordEncoder">
+		<constructor-arg value="256" />
+	</bean>  
+</beans>

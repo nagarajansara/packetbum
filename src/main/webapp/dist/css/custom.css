@@ -1,0 +1,34 @@
+body {
+  min-height: 2000px;
+  padding-top: 70px;
+}
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.category-list-item {
+    border: 1px solid #cacaca;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    height: 100px;
+     padding-top: 38px;
+    margin: 0 25px 20px 0;
+    text-align: center;
+    width: 120px;
+}
+
+.category-list-item:hover{
+	 background-color: #000000;
+    color: white;
+}
+.hidden{
+	display:none;
+}
+.category-list-item-active, .category-list-item-hover {
+    background-color: #000000;
+    color: white;
+}

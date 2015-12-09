@@ -1,0 +1,230 @@
+
+a.btn_loginSL, a.btn_signupSL, a.btn_logoutSL {
+
+	width: 80px;
+	height: 26px;
+	text-indent: -9999px;
+}
+a.btn_loginSL{
+	background: url(../img/loginSL.png);	
+	
+}
+	
+a.btn_loginSL:hover {
+	background: url(../img/loginSL.png) left bottom;
+}
+a.btn_signupSL {
+	background: url(../img/sign_upSL.png);
+	width: 102px;
+}
+a.btn_signupSL:hover {
+	background: url(../img/sign_upSL.png) left bottom;
+	width: 102px;
+}
+a.btn_logoutSL {
+	background: url(../img/btn_logoutSL.png);
+}
+a.btn_logoutSL:hover {
+	background: url(../img/btn_logoutSL.png) left bottom;
+	;
+}
+
+.banner_form_paraSL {
+    background: url("../img/banner_formSL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    color: #4d535b;
+    margin: 25px 0 20px;
+    padding: 50px 0 0;
+}
+
+.get_quotesSL{
+	background: url("../img/btn_quotesSL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    clear: both;
+    display: block;
+    height: 55px;
+    margin: 20px 0;
+    overflow: hidden;
+    width: 230px;
+		
+}
+
+.fast_easySL, .great_pricesSL, .trust_wrthySL, .helpfulSL {
+    float: left;
+    margin: 0 20px 0 0;
+    width: 220px;
+}
+
+
+.fast_easySL div, .great_pricesSL div, .trust_wrthySL div, .helpfulSL div {
+    background: url("../img/key_bg.jpg") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+    margin: 0 0 30px;
+}
+
+.fast_easySL p, .great_pricesSL p, .trust_wrthySL p, .helpfulSL p {
+    margin: 0 20px 0 0;
+    padding: 25px 0 0;
+    width: 198px;
+}
+.fast_easySL div img, .great_pricesSL div img, .trust_wrthySL div img, .helpfulSL div img {
+    margin: 19px 70px;
+}
+
+.fast_easySL p {
+    background: url("../img/fast_easySL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.great_pricesSL p {
+    background: url("../img/great_priceSL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.trust_wrthySL p {
+    background: url("../img/trust_wrthySL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+
+.helpfulSL p {
+    background: url("../img/helfulSL.png") no-repeat scroll 0 0 rgba(0, 0, 0, 0);
+}
+.btn_photoSL {
+	
+	background: url(../img/btn_photosSL.png) no-repeat;
+	
+}
+ .btns .btn_cancelSL {
+	background: url(../img/btn_cancelSL.png) no-repeat;
+	}
+	
+.btns .btn_doneSL {
+	background: url(../img/btn_doneSL.png) no-repeat;
+}
+
+.btn_continueSL{
+	background: url(../img/btn_continueSL.png) no-repeat;
+	}
+	
+.btn_signinSL {
+    background: rgba(0, 0, 0, 0) url("../img/btn_signinSL.png") no-repeat scroll 0 0;
+    border: medium none;
+    cursor: pointer;
+    display: block;
+    height: 38px;
+    margin: 0 auto;
+    overflow: hidden;
+    width: 127px;
+}
+a.btn_signinSL {
+	overflow: hidden;
+	display: block;
+	width: 127px;
+	height: 38px;
+	background: url(../img/btn_signinSL.png) no-repeat;
+	margin: 0 auto;
+}
+a.btn_signinSL:hover {
+	background: url(../img/btn_signinSL.png) no-repeat left bottom;
+}
+a.btn_sigupSL {
+	overflow: hidden;
+	display: block;
+	width: 119px;
+	height: 40px;
+	background: url(../img/btn_registerSL.png) no-repeat;
+	margin: 0 auto;
+}
+a.btn_sigupSL:hover {
+	background: url(../img/btn_registerSL.png) no-repeat left bottom;
+}
+
+a.customerSL, a.carrierSL {
+	display: block;
+	float: left;
+	background: url(../img/customerSL.png) no-repeat;
+	width: 158px;
+	height: 60px;
+}
+a.customerSL:hover {
+	background: url(../img/customerSL.png) no-repeat left bottom;
+}
+a.customerSL.activation {
+	background: url(../img/customerSL.png) no-repeat left bottom;
+}
+a.carrierSL {
+	background: url(../img/carrierSL.png) no-repeat;
+}
+a.carrierSL:hover {
+	background: url(../img/carrierSL.png) no-repeat left bottom;
+}
+
+ a.btn_logoutSL {
+	background: url(../img/btn_logoutSL.png);
+	width: 80px;
+	height: 26px;
+	text-indent: -9999px;
+}
+
+.btn_logoutSL{
+	background: url(../img/btn_logoutSL.png);
+	width: 80px;
+	height: 26px;
+	text-indent: -9999px;
+	}
+	
+.btn_continueSL:hover{	
+	background: url(../img/btn_continueSL.png) no-repeat;
+	}
+
+a.btn_learnSL {
+    background: rgba(0, 0, 0, 0) url("../img/btn_learnSL.png") no-repeat scroll 0 0;
+    display: block;
+    height: 45px;
+    margin: 5px 0 0 260px;
+    text-indent: -9999px;
+    width: 165px;
+}
+
+.btnValue .btnSignupSL {
+    background: rgba(0, 0, 0, 0) url("../img/sign_upSL.png") no-repeat scroll 0 0;
+    display: block;
+    height: 26px;
+    margin: 10px 0 0 270px;
+    width: 122px;
+}
+
+.btn_searchSL a {
+    background: rgba(0, 0, 0, 0) url("../img/btn_searchSL.png") no-repeat scroll 0 0;
+    display: block;
+    height: 45px;
+    margin: 4px 0 0;
+    overflow: hidden;
+    width: 165px;
+}
+a.submitSL {
+    background: rgba(0, 0, 0, 0) url("../img/submitQuoteSL.png") no-repeat scroll 0 0;
+    display: block;
+    height: 45px;
+    margin: 40px auto 0;
+    width: 165px;
+}
+.paddingleftSL {
+   
+    padding-left: 58px;
+}
+
+a.btn_viewimgSL {
+	display: block;
+	text-indent: -9999px;
+	width: 108px;
+	height: 26px;
+	background: url(../img/btn_viewimgSL.png) no-repeat 0px 0px;
+	margin: 0 auto;
+}
+a.btn_viewimgSL:hover {
+	background: url(../img/btn_viewimgSL.png) no-repeat left bottom;
+}
+
+a.btn_upgradeSL {
+	display: block;
+	width: 108px;
+	height: 26px;
+	background: url(../img/btn_upgradeSL.png) no-repeat 0px 0px;
+}
+a.btn_upgradeSL:hover {
+	background: url(../img/btn_upgradeSL.png) no-repeat left bottom;
+}

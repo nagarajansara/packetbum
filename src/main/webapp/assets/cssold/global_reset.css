@@ -1,0 +1,184 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* CSS RESET RULES */
+html, body, a, abbr, acronym, address, area, b, bdo, big, blockquote, button, caption, cite, code,
+col, colgroup, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, hr, i, img,
+ins, kbd, label, legend, li, map, object, ol, p, param, pre, q, samp, small, span, strong, sub,
+sup, table, tbody, td, textarea, tfoot, th, thead, tr, tt, ul, var, select, input {
+    margin: 0;
+    padding: 0;
+    vertical-align: baseline;
+}
+
+body {
+    background: #FFF;
+    color: #000;
+    font: 85%/1.5 verdana, arial, helvetica, sans-serif;
+}
+
+code, pre {
+    white-space: pre;
+}
+
+del {
+    text-decoration: line-through;            /* it's deleted text - show it as such */
+}
+
+dfn {
+    font-style: italic;
+    font-weight: bold;
+}
+
+em {
+    font-style: italic;
+}
+
+fieldset {
+    border: 0;
+    display: inline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font: bold 1em/1.5 georgia, garamond, "times new roman", times, serif;
+}
+
+img {
+    border: 0;
+    vertical-align: bottom;
+}
+
+ins {
+    text-decoration: none;
+}
+
+strong {
+    font-weight: bold;
+}
+
+tt {
+    display: block;
+    margin: 0.5em 0;
+    padding: 0.5em 1em;
+}
+
+.skip {
+    position: absolute;
+    left: -999em;
+}
+
+
+/*reset*/
+li {
+	list-style: none;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+p, span {
+	padding: 0;
+	margin: 0;
+}
+input, select {
+	outline: none;
+	font-family: 'GothamRoundedLight';
+	font-size: 13px;
+	border-top: 2px solid #d9d9d9;
+	border: 1px solid #d9d9d9;
+}
+h1, h2, h3, h4, h5 {
+	font-family: 'GothamRoundedBold';
+}
+li.active a {
+	cursor: default;
+}
+
+.select-style {
+    border: 1px solid #ccc;
+	border-bottom: none;
+    width: 48px;
+    border-radius: 3px;
+    overflow: hidden;
+    background: #fafafa  url(../img/arrow_up.png) no-repeat 90% 50%;
+}
+.select-style.contact {
+    border: 1px solid #ccc;
+    width: 240px;
+	border-radius: 0;
+	border-top: 2px solid #ccc;
+	padding: 5px;
+    overflow: hidden;
+    background: #fff  url(../img/arrow_up.png) no-repeat 90% 50%;
+}
+.select-style:hover {
+    background: #fafafa url(../img/ico_down.gif) no-repeat 90% 50%;
+}
+.select-style.contact:hover {
+    background: #fff url(../img/ico_down.gif) no-repeat 90% 50%;
+}
+
+.select-style select {
+    padding: 2px 2px;
+	width: 135%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+.select-style.contact select {
+    padding: 0;
+	width: 100%;
+    border: none;
+    box-shadow: none;
+    background: transparent;
+    background-image: none;
+    -webkit-appearance: none;
+}
+
+
+.select-style select:focus {
+    outline: none;
+}
+
+
+/*Font Family*/
+@font-face {
+    font-family: 'GothamRoundedBold';
+    src: url('../fonts/gothamrnd-bold.eot');
+    src: url('../fonts/gothamrnd-bold.eot') format('embedded-opentype'),
+         url('../fonts/gothamrnd-bold.woff2') format('woff2'),
+         url('../fonts/gothamrnd-bold.woff') format('woff'),
+         url('../fonts/gothamrnd-bold.ttf') format('truetype'),
+         url('../fonts/gothamrnd-bold.svg#GothamRoundedBold') format('svg');
+}
+@font-face {
+    font-family: 'GothamRoundedLight';
+    src: url('../fonts/gothamrnd-light.eot');
+    src: url('../fonts/gothamrnd-light.eot') format('embedded-opentype'),
+         url('../fonts/gothamrnd-light.woff2') format('woff2'),
+         url('../fonts/gothamrnd-light.woff') format('woff'),
+         url('../fonts/gothamrnd-light.ttf') format('truetype'),
+         url('../fonts/gothamrnd-light.svg#GothamRoundedLight') format('svg');
+}
+@font-face {
+    font-family: 'GothamRoundedMedium';
+    src: url('../fonts/gothamrnd-medium.eot');
+    src: url('../fonts/gothamrnd-medium.eot') format('embedded-opentype'),
+         url('../fonts/gothamrnd-medium.woff2') format('woff2'),
+         url('../fonts/gothamrnd-medium.woff') format('woff'),
+         url('../fonts/gothamrnd-medium.ttf') format('truetype'),
+         url('../fonts/gothamrnd-medium.svg#GothamRoundedMedium') format('svg');
+}
+@font-face {
+    font-family: 'GothamRoundedBook';
+    src: url('../fonts/gothamrnd-book.eot');
+    src: url('../fonts/gothamrnd-book.eot') format('embedded-opentype'),
+         url('../fonts/gothamrnd-book.woff2') format('woff2'),
+         url('../fonts/gothamrnd-book.woff') format('woff'),
+         url('../fonts/gothamrnd-book.ttf') format('truetype'),
+         url('../fonts/gothamrnd-book.svg#GothamRoundedBook') format('svg');
+}
+
+
